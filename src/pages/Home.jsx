@@ -90,42 +90,50 @@ const Home = () => {
 
     return (
         <div className={styles.home}>
-            <h1>
-                Welcome to One-Time Chat
-            </h1>
+            <div className={styles.heading}>
+                <h1>
+                    Welcome to One-Time Chat
+                </h1>
+            </div>
             {showNameCard &&
-                <Card
-                    heading={"Start quick and anonymous chat"}
-                    inputLabel={"Enter name"}
-                    state={name}
-                    setState={setName}
-                    onClickFunction={handleNameSubmit}
-                />
+                <div className={styles.cardSection}>
+                    <Card
+                        heading={"Start quick and anonymous chat"}
+                        inputLabel={"Enter name"}
+                        state={name}
+                        setState={setName}
+                        onClickFunction={handleNameSubmit}
+                    />
+                </div>
             }
 
             {
                 showRoomCard &&
-                <Card
-                    heading={"Create or enter chat rrom id"}
-                    inputLabel={"Enter room id"}
-                    state={room}
-                    setState={setRoom}
-                    onClickFunction={joinRoom}
-                />
+                <div className={styles.cardSection}>
+                    <Card
+                        heading={"Create or enter chat rrom id"}
+                        inputLabel={"Enter room id"}
+                        state={room}
+                        setState={setRoom}
+                        onClickFunction={joinRoom}
+                    />
+                </div>
             }
 
             {
                 showChatRoom &&
-                <ChatRoom
-                    currentUser={socket.id}
-                    senderName={name}
-                    message={message}
-                    setMessage={setMessage}
-                    messages={messages}
-                    setMessages={setMessages}
-                    sendMessage={sendMessage}
-                    leaveRoom={leaveRoom}
-                />
+                <div className={styles.chatSection}>
+                    <ChatRoom
+                        currentUser={socket.id}
+                        senderName={name}
+                        message={message}
+                        setMessage={setMessage}
+                        messages={messages}
+                        setMessages={setMessages}
+                        sendMessage={sendMessage}
+                        leaveRoom={leaveRoom}
+                    />
+                </div>
             }
         </div>
     );

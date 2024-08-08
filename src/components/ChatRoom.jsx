@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/ChatRoom.module.css';
 
-const ChatRoom = ({ currentUser, senderName, message, setMessage, setMessages, messages, sendMessage,leaveRoom }) => {
+const ChatRoom = ({ currentUser, senderName, message, setMessage, setMessages, messages, sendMessage, leaveRoom }) => {
     return (
         <div className={styles.chatRoom}>
             <div className={styles.chatSection}>
@@ -22,16 +22,20 @@ const ChatRoom = ({ currentUser, senderName, message, setMessage, setMessages, m
                 ))}
             </div>
             <div className={styles.sendMessage_input}>
-                <input
-                    type="text"
-                    placeholder="Type your message..."
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                />
-                <button onClick={sendMessage}>Send</button>
-                <button
-                onClick={leaveRoom}
-                className={styles.leave_btn}>Leave</button>
+                <div className={styles.message_field}>
+                    <input
+                        type="text"
+                        placeholder="Type your message..."
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                    />
+                </div>
+                <div className={styles.btn}>
+                    <button onClick={sendMessage}>Send</button>
+                    <button
+                        onClick={leaveRoom}
+                        className={styles.leave_btn}>Leave</button>
+                </div>
             </div>
         </div>
     );

@@ -1,13 +1,67 @@
 .home {
     width: 100%;
     height: 100vh;
-    min-height: 300px;
+    min-height: 500px;
     background-color: #A0937D;
     text-align: center;
     color: white;
 
-    h1 {
-        padding: 2rem 0;
+ 
+    .heading {
+        height: 10vh;
+        border-bottom: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        h1 
+        {
+            font-size: 2rem;
+        }
+    }
+    .chatSection
+    {
+        height: 90vh;
+    }
+    .cardSection
+    {
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
 
 }
+
+
+/* Extra Small */
+@media (max-width: 599px) {
+    /* Styles for mobile devices */
+   .home 
+   {
+    .heading
+    {
+        h1 
+        {
+            font-size: 20px;
+        }
+    }
+   }
+  }
+  
+  /* Small */
+  @media (min-width: 600px) and (max-width: 959px) {
+    /* Styles for tablets */
+  }
+  
+  /* Medium */
+  @media (min-width: 960px) and (max-width: 1279px) {
+    /* Styles for desktops */
+  }
+  
+  /* Large */
+  @media (min-width: 1280px) {
+    /* Styles for widescreen monitors */
+  }
+  

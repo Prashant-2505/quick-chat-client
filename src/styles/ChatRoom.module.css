@@ -1,60 +1,191 @@
-.chatRoom
-{
-     height: 81.4vh;
-     width: 100%;
-     background-color: #B6C7AA;
+.chatRoom {
+    height: 100%;
+    width: 100%;
+    background-color: #B6C7AA;
 
-     .chatSection
-     {
+    .chatSection {
         height: 90%;
 
-        p 
-        {
+        p {
             padding: 10px;
         }
 
-        .message{
-            padding:0.5rem 3rem ;
+        .message {
+            padding: 0.5rem 3rem;
             color: black;
             border-radius: 10px;
             background-color: #F6E6CB;
             padding: 3px 5px;
-            border: 1px solid  ;
-           
+            border: 1px solid;
+
         }
-        .userName
-        {
+
+        .userName {
             margin-left: 10px;
         }
 
-       
-     }
-     .sendMessage_input
-     {
+
+    }
+
+    .sendMessage_input {
         height: 10%;
         width: 100%;
-        border: 1px solid white;
         background-color: #DCC5C5;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        input {
-            width: 80%;
-            padding: 0.8rem  0;
-            background-color: #ddcbcb;
-            border: none;
-            outline: none;
-            padding: 0 1rem;
+
+        .message_field
+        {
+            width: 70%;
             height: 100%;
+            input {
+                width: 100%;
+                height: 100%;
+                padding: 0.8rem 0;
+                background-color: #ddcbcb;
+                border: none;
+                outline: none;
+                padding: 0 1rem;
+                height: 100%;
+            }
+            
         }
-        button
-        {
+        .btn {
+            height: 100%;
+            width: 30%;
+            display: flex;
+        
+            button {
+                height: 100%;
+                width: 50%;
+                margin-left: 10px;
+            }
+        }
+      
+
+        /* button {
             width: 20%;
-        }
-        .leave_btn
-        {
+        } */
+
+        .leave_btn {
             background-color: lightcoral;
         }
-     }
+    }
+}
+
+
+
+
+
+
+/* Extra Small */
+@media (max-width: 599px) {
+    /* Styles for mobile devices */
+    .sendMessage_input {
+        height: 10%;
+        width: 100%;
+        background-color: #DCC5C5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .message_field
+        {
+            width: 70%;
+            height: 100%;
+            input {
+                width: 100%;
+                height: 100%;
+                background-color: #ddcbcb;
+                border: none;
+                outline: none;
+                padding: 0 1rem;
+                height: 100%;
+            }
+            
+        }
+        .btn {
+            height: 100%;
+            width: 30%;
+            display: flex;
+        
+            button {
+                height: 100%;
+                width: 50%;
+                margin-left: 200px;
+                padding: 0;
+            }
+        }
+      
+
+        /* button {
+            width: 20%;
+        } */
+
+        .leave_btn {
+            background-color: lightcoral;
+        }
+    }
+  
+}
+
+/* Small */
+@media (min-width: 600px) and (max-width: 959px) {
+    /* Styles for tablets */
+}
+
+/* Medium */
+@media (min-width: 960px) and (max-width: 1279px) {
+    .chatRoom {
+        height: 100%;
+
+        .chatSection {
+            height: 90%;
+        }
+
+        .sendMessage_input {
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            input {
+                background-color: palegoldenrod;
+            }
+
+            .message_field {
+                height: 100%;
+                width: 70%;
+
+                input 
+                {
+                    width: 100%;
+
+                }
+            }
+
+            .btn {
+                height: 100%;
+                width: 30%;
+                display: flex;
+            
+                button {
+                    height: 100%;
+                    width: 50%;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+/* Large */
+@media (min-width: 1280px) {
+    /* Styles for widescreen monitors */
 }
