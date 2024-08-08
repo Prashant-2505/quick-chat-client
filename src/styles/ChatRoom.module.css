@@ -18,7 +18,8 @@
         /* Hide scrollbar in IE 10+ */
 
         .chatSection::-webkit-scrollbar {
-            display: none; /* Hide scrollbar in Chrome, Safari, and other WebKit browsers */
+            display: none;
+            /* Hide scrollbar in Chrome, Safari, and other WebKit browsers */
         }
 
         .chat_bubble {
@@ -43,7 +44,6 @@
         .messageText {
             margin: 0;
             text-align: left;
-            /* Default alignment */
         }
 
         .message {
@@ -93,6 +93,11 @@
         .message_field {
             width: 70%;
             height: 100%;
+
+            form {
+                width: 100%;
+                height: 100%;
+            }
 
             input {
                 width: 100%;

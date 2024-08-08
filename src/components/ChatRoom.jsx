@@ -28,12 +28,14 @@ const ChatRoom = ({ currentUser, message, setMessage, messages, sendMessage, lea
 
             <div className={styles.sendMessage_input}>
                 <div className={styles.message_field}>
-                    <input
-                        type="text"
-                        placeholder="Type your message..."
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                    />
+                    <form onSubmit={ sendMessage}>
+                        <input
+                            type="text"
+                            placeholder="Type your message..."
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                        />
+                    </form>
                 </div>
                 <div className={styles.btn}>
                     <button onClick={sendMessage}>Send</button>
