@@ -5,10 +5,52 @@
 
     .chatSection {
         height: 90%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
 
-        p {
+        .chat_bubble {
+            max-width: 60%;
             padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            word-wrap: break-word;
+            margin-bottom: 10px;
+            align-self: flex-start;
+            /* Aligns all messages to the start (left) by default */
         }
+
+
+        .currentUser {
+            background-color: #d1e7dd;
+            /* Different color for current user */
+            align-self: flex-end;
+            /* Aligns the current user's messages to the right */
+        }
+
+        .messageText {
+            margin: 0;
+            text-align: left;
+            /* Default alignment */
+        }
+
+        .message {
+            display: block;
+        }
+
+        .userName {
+            display: block;
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 5px;
+            text-align: right;
+            /* Aligns the username to the right */
+        }
+
+        .chat-bubble p {
+            margin: 0;
+        }
+
 
         .message {
             padding: 0.5rem 3rem;
@@ -36,10 +78,10 @@
         align-items: center;
 
 
-        .message_field
-        {
+        .message_field {
             width: 70%;
             height: 100%;
+
             input {
                 width: 100%;
                 height: 100%;
@@ -50,20 +92,21 @@
                 padding: 0 1rem;
                 height: 100%;
             }
-            
+
         }
+
         .btn {
             height: 100%;
             width: 30%;
             display: flex;
-        
+
             button {
                 height: 100%;
                 width: 50%;
                 margin-left: 10px;
             }
         }
-      
+
 
         /* button {
             width: 20%;
@@ -82,6 +125,7 @@
 
 /* Extra Small */
 @media (max-width: 599px) {
+
     /* Styles for mobile devices */
     .sendMessage_input {
         height: 10%;
@@ -92,10 +136,10 @@
         align-items: center;
 
 
-        .message_field
-        {
+        .message_field {
             width: 70%;
             height: 100%;
+
             input {
                 width: 100%;
                 height: 100%;
@@ -105,13 +149,14 @@
                 padding: 0 1rem;
                 height: 100%;
             }
-            
+
         }
+
         .btn {
             height: 100%;
             width: 30%;
             display: flex;
-        
+
             button {
                 height: 100%;
                 width: 50%;
@@ -119,7 +164,7 @@
                 padding: 0;
             }
         }
-      
+
 
         /* button {
             width: 20%;
@@ -129,7 +174,7 @@
             background-color: lightcoral;
         }
     }
-  
+
 }
 
 /* Small */
@@ -160,8 +205,7 @@
                 height: 100%;
                 width: 70%;
 
-                input 
-                {
+                input {
                     width: 100%;
 
                 }
@@ -171,7 +215,7 @@
                 height: 100%;
                 width: 30%;
                 display: flex;
-            
+
                 button {
                     height: 100%;
                     width: 50%;

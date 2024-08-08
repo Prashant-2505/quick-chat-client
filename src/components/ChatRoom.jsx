@@ -6,21 +6,18 @@ const ChatRoom = ({ currentUser, senderName, message, setMessage, setMessages, m
         <div className={styles.chatRoom}>
             <div className={styles.chatSection}>
                 {messages.map((msg, index) => (
-                    <>
-                        <p
-                            key={index}
-                            style={{ textAlign: currentUser === msg.senderId ? 'right' : 'left' }}
-                        >
-
+                    <div
+                        key={index} // Move the key to the parent element
+                        className={`${styles.chat_bubble} ${currentUser === msg.senderId ? styles.currentUser : ''}`}
+                    >
+                        <p className={styles.messageText}>
                             <span className={styles.message}>{msg.message}</span>
-                            <span
-                                className={styles.userName}>{msg.senderName}</span>
-
+                            <span className={styles.userName}>{msg.senderName}</span>
                         </p>
-
-                    </>
+                    </div>
                 ))}
             </div>
+
             <div className={styles.sendMessage_input}>
                 <div className={styles.message_field}>
                     <input
