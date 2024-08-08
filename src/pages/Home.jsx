@@ -58,6 +58,7 @@ const Home = () => {
             setShowNameCard(true);
             setShowChatRoom(false);
             setShowRoomCard(false)
+            setMessages([])
             setName("")
             setRoom("")
         }
