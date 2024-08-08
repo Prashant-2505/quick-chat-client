@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styles from '../styles/ChatRoom.module.css';
 
-const ChatRoom = ({ currentUser, senderName, message, setMessage, setMessages, messages, sendMessage, leaveRoom }) => {
+const ChatRoom = ({ currentUser, message, setMessage, messages, sendMessage, leaveRoom }) => {
+    const chatEndRef = useRef(null);
+
+    useEffect(() => {
+        // Scroll to the last message whenever the messages array changes
+        chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, [messages]);
+
     return (
         <div className={styles.chatRoom}>
             <div className={styles.chatSection}>
                 {messages.map((msg, index) => (
                     <div
-                        key={index} // Move the key to the parent element
+                        key={index}
                         className={`${styles.chat_bubble} ${currentUser === msg.senderId ? styles.currentUser : ''}`}
                     >
                         <p className={styles.messageText}>
@@ -16,6 +23,7 @@ const ChatRoom = ({ currentUser, senderName, message, setMessage, setMessages, m
                         </p>
                     </div>
                 ))}
+                <div ref={chatEndRef} />
             </div>
 
             <div className={styles.sendMessage_input}>
@@ -31,7 +39,10 @@ const ChatRoom = ({ currentUser, senderName, message, setMessage, setMessages, m
                     <button onClick={sendMessage}>Send</button>
                     <button
                         onClick={leaveRoom}
-                        className={styles.leave_btn}>Leave</button>
+                        className={styles.leave_btn}
+                    >
+                        Leave
+                    </button>
                 </div>
             </div>
         </div>
