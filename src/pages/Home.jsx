@@ -4,6 +4,7 @@ import socket from '../socket';
 import styles from "../styles/Home.module.css"
 import Card from '../components/Card';
 import ChatRoom from '../components/ChatRoom';
+import { motion } from 'framer-motion';
 
 
 //* here socket.connect() is used to connect the socket client to server send confirmation that a user is connected and at server we can listen it on socket.on(cnnection) these are default messags of socket 
