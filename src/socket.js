@@ -1,7 +1,7 @@
 // src/socket.js
 import { io } from 'socket.io-client';
 
-const SOCKET_URL = 'http://localhost:4000'; //^ backend url 
+const SOCKET_URL = 'https://quick-chat-weqp.onrender.com'; //^ backend url 
 
 const socket = io(SOCKET_URL, {
     autoConnect: false,
