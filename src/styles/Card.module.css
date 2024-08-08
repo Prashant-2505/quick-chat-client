@@ -1,0 +1,49 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    color: #A0937D;
+}
+
+.innerCard {
+    height: 100%;
+    width: 50%;
+    border-radius: 20px;
+    background-color: white;
+    padding: 2rem 0;
+
+}
+
+h3 {
+    text-align: center;
+}
+
+.input_div {
+    padding: 2rem;
+    width: 100%;
+    position: relative;
+
+    p {
+        text-align: left;
+    }
+
+    input {
+        width: 100%;
+        padding: 1rem;
+        background-color: #E7D4B5;
+        outline: none;
+        border: none;
+    }
+
+
+}
+
+button {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background-color: #F6E6CB;
+    border: none;
+}

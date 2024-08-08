@@ -1,0 +1,60 @@
+.chatRoom
+{
+     height: 81.4vh;
+     width: 100%;
+     background-color: #B6C7AA;
+
+     .chatSection
+     {
+        height: 90%;
+
+        p 
+        {
+            padding: 10px;
+        }
+
+        .message{
+            padding:0.5rem 3rem ;
+            color: black;
+            border-radius: 10px;
+            background-color: #F6E6CB;
+            padding: 3px 5px;
+            border: 1px solid  ;
+           
+        }
+        .userName
+        {
+            margin-left: 10px;
+        }
+
+       
+     }
+     .sendMessage_input
+     {
+        height: 10%;
+        width: 100%;
+        border: 1px solid white;
+        background-color: #DCC5C5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        input {
+            width: 80%;
+            padding: 0.8rem  0;
+            background-color: #ddcbcb;
+            border: none;
+            outline: none;
+            padding: 0 1rem;
+            height: 100%;
+        }
+        button
+        {
+            width: 20%;
+        }
+        .leave_btn
+        {
+            background-color: lightcoral;
+        }
+     }
+}
