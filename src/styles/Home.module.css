@@ -40,6 +40,7 @@
     /* Styles for mobile devices */
    .home 
    {
+    height: 100dvh;
     .heading
     {
         h1 
